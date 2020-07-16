@@ -73,9 +73,9 @@ function headerOn() {
     var scroll = htmlElem.scrollTop;
     
     if (scroll > 1) {
-        headerElem.style.backgroundColor = '#fff';
+        headerElem.style.background = '#fff';
     } else {
-        headerElem.style.backgroundColor = 'none';
+        headerElem.style.background = 'none';
     }
 }
 
