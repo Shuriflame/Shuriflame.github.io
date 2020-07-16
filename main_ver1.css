@@ -247,7 +247,6 @@
 }
 
 .slide_bar button {
-    width: 14.285714%;
     height: 5px;
     background-color: #bfbfbf;
     border: none;
@@ -260,14 +259,6 @@
 
 .slide_bar button:hover {
     background-color: #000;
-}
-
-.slide_life button {
-    width: 10%;
-}
-
-.slide_growth button {
-    width: 16.666666%;
 }
 
 .slide_bar button.on {

@@ -15,6 +15,10 @@ $(document).ready(function () {
             autoplaySpeed: 2000,
             focusOnselect: true,
         });
+        
+        for (let i = 0; i < button.length; i++) {
+            button[i].style.width = 'calc(100% / ' + button.length + ')';
+        }
 
         button.click(function () {
             var slideNo = $(this).index();
