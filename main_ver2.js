@@ -70,7 +70,7 @@ function windowCheck() {
 }
 
 function headerOn() {
-    var scroll = window.scrollTop();
+    var scroll = window.scrollTop;
     if (scroll > 1) {
         headerElem.style.background = '#fff';
     } else {
