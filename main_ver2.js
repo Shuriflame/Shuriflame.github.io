@@ -72,9 +72,9 @@ function windowCheck() {
 function headerOn() {
     var scroll = window.scrollTop;
     if (scroll > 1) {
-        headerElem.style.background = '#fff';
+        headerElem.style.backgroundColor = '#fff';
     } else {
-        headerElem.style.background = 'none';
+        headerElem.style.backgroundColor = 'none';
     }
 }
 
