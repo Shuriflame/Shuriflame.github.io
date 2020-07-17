@@ -337,19 +337,18 @@
     color: #fff;
     font-weight: 900;
     letter-spacing: 1px;
+    padding-left: 15px;
 }
 
-#pop_recruit > span {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 64px;
+#pop_recruit::after {
+    content: '';
+    display: inline-block;
     width: 13px;
     height: 13px;
     border-radius: 100%;
     background-color: #37E5BA;
+    margin-bottom: 3.5%;
 }
-
 
 
 /*--------------------------end--------------------------*/
