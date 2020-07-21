@@ -15,7 +15,7 @@ $(document).ready(function () {
             autoplaySpeed: 2000,
             focusOnselect: true,
         });
-        
+
         for (let i = 0; i < button.length; i++) {
             button[i].style.width = 'calc(100% / ' + button.length + ')';
         }
@@ -65,7 +65,6 @@ function windowCheck() {
         endTxt.innerHTML = '<h3>MORE CONNECTED THAN EVER<br>LET’S BE HYPERCONNECTED!</h3>';
         
         hamburger.removeEventListener('click', hamburgerOn);
-
         window.addEventListener('scroll', headerOn);
         for (let i = 0; i < liVision.length; i++) {
             liVision[i].addEventListener('mouseenter', hoverImg);
@@ -75,11 +74,10 @@ function windowCheck() {
 
 function headerOn() {
     var scroll = htmlElem.scrollTop;
-    
-    if (scroll > 1) {
-        headerElem.style.background = '#fff';
+    if (scroll > 0) {
+        headerElem.style.backgroundColor = '#fff';
     } else {
-        headerElem.style.background = 'none';
+        headerElem.style.background = '';
     }
 }
 
@@ -92,19 +90,8 @@ function hamburgerOn() {
 }
 
 function hoverImg() {
-    if (this.children[0].textContent === '01') {
-        imgVision.src = 'img/hyperconnect/hover-proactive.svg';
-    } else if (this.children[0].textContent === '02') {
-        imgVision.src = 'img/hyperconnect/hover-oneteam.svg';
-    } else if (this.children[0].textContent === '03') {
-        imgVision.src = 'img/hyperconnect/hover-aimhigh.svg';
-    } else if (this.children[0].textContent === '04') {
-        imgVision.src = 'img/hyperconnect/hover-prioritize.svg';
-    } else if (this.children[0].textContent === '05') {
-        imgVision.src = 'img/hyperconnect/hover-movefast.svg';
-    } else if (this.children[0].textContent === '06') {
-        imgVision.src = 'img/hyperconnect/hover-logical.svg';
-    } else if (this.children[0].textContent === '07') {
-        imgVision.src = 'img/hyperconnect/hover-open.svg';
-    } else return;
+    var arrLis = Array.from(liVision);
+    var crrIndex = arrLis.indexOf(this);
+    
+    imgVision.src = '../img/hyperconnect/hover-' + crrIndex + '.svg';    
 }
