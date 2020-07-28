@@ -10,7 +10,7 @@
 .intro_main {
     position: relative;
     margin-bottom: 150px;
-    background: url(../img/hyperconnect/image\ \(11\).svg) no-repeat;
+    background: url(img/hyperconnect/image\ \(11\).svg) no-repeat;
     background-position-x: 79%;
 }
 
@@ -43,14 +43,14 @@
 
 .cont_company {
     position: relative;
-    background: url(../img/hyperconnect/image\ \(2\).svg) no-repeat;
+    background: url(img/hyperconnect/image\ \(2\).svg) no-repeat;
     background-position: bottom right;
     padding-bottom: 700px;
 }
 
 .cont_company .cont_bg {
     width: 100%;
-    background: url(../img/hyperconnect/bg-ci-hyperconnect-12ec2ad94ba7151c0efdfe5eb334d562.svg) repeat-x;
+    background: url(img/hyperconnect/bg-ci-hyperconnect-12ec2ad94ba7151c0efdfe5eb334d562.svg) repeat-x;
     background-position: center;
 }
 
@@ -107,7 +107,7 @@
 /* .img_vision {
     width: 450px;
     height: 450px;
-    background-image: url(../img/hyperconnect/hover-proactive.svg);
+    background-image: url(img/hyperconnect/hover-proactive.svg);
     background-repeat: no-repeat;
     float: left;
 } */
@@ -170,7 +170,7 @@
 .cont_welfare {
     position: relative;
     display: flex;
-    background: url(../img/hyperconnect/image\ \(3\).svg) no-repeat;
+    background: url(img/hyperconnect/image\ \(3\).svg) no-repeat;
     background-position-x: right;
     min-width: 55%;
     justify-content: center;
@@ -268,7 +268,7 @@
 /*-------------------4th cont_end---------------*/
 
 .cont_end {
-    background: url(../img/hyperconnect/bg-rounded-bottom-07b1e57cdc0a5650c22ebaef357aaf5e.png) no-repeat;
+    background: url(img/hyperconnect/bg-rounded-bottom-07b1e57cdc0a5650c22ebaef357aaf5e.png) no-repeat;
     background-position-x: -400px;
     height: 1200px;
     display: flex;
@@ -290,7 +290,7 @@
 }
 
 .slick-prev::before {
-    content: url(../img/hyperconnect/slider-arrow.svg);
+    content: url(img/hyperconnect/slider-arrow.svg);
     transform: scale(.025) rotate(90deg);
     position: absolute;
     top: -280px;
@@ -298,7 +298,7 @@
     color: rgba(0, 0, 0, 0 );
 }
 .slick-next::before {
-    content: url(../img/hyperconnect/slider-arrow.svg);
+    content: url(img/hyperconnect/slider-arrow.svg);
     transform: scale(.025) rotate(270deg);
     position: absolute;
     top: -280px;
