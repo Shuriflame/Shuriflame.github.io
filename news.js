@@ -1,11 +1,13 @@
 const htmlElem = document.querySelector('html');
 const hamburger = document.querySelector('.hamburger_box');
 const headerElem = document.querySelector('.header_wrap');
-const $section = document.querySelectorAll('main > section');
+const $main = document.querySelector('main');
+const $section = $main.querySelectorAll('main > section');
 const $article = $section[0].querySelectorAll('article');
 
 window.addEventListener('resize', windowCheck);
 window.addEventListener('load', windowCheck);
+$main.addEventListener('click', clickMenu);
 
 function windowCheck() {
     if (window.innerWidth <= 500) {
@@ -53,4 +55,17 @@ function articleSet() {
             $article[i].style.transform = 'translate(0)';
         }
     }
+}
+
+function clickMenu(e) {
+    e.preventDefault();
+    if (e.target.parentNode.parentNode.tagName !== 'ASIDE') return;
+    $section.forEach(sec => {
+        sec.classList.remove('on');
+        e.target.parentNode.classList.remove('on');
+        if (e.target.parentNode.className === sec.className) {
+            e.target.parentNode.classList.add('on');
+            sec.classList.add('on');
+        }
+    });
 }
