@@ -53,7 +53,7 @@ header {
 }
 
 .gnb_menu_list:hover {
-    border-bottom: 1px solid #111;
+    border-bottom: 2px solid #111;
 }
 
 h1.header_logo {
@@ -84,6 +84,9 @@ nav {
     font-size: 0;
 }
 
+.gnb_menu_list {
+    margin: 0 10px;
+}
 
 li.gnb_menu_list, li.gnb_menu_list_submit {
     display: inline-block;

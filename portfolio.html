@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <script src="mySketch.js" type="text/javascript"></script>
+    <script src="Liq.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.9.0/lib/p5.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+        <defs>
+            <filter id="filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1">
+                </feTurbulence>
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp">
+                </feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
+</head>
+<body>
+    <header>
+        <h1 class="glitch" data-text="Seul's Portfolio">Seul's Portfolio</h1>
+    </header>
+    <aside>
+        <ul>
+            <li class="mail"><a href="#"></a></li>
+            <li><a href="https://www.facebook.com/myhatd" target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/in/hanseul-choi/" target="_blank"></a></li>
+            <li><a href="https://github.com/Shuriflame/Shuriflame.github.io" target="_blank"></a></li>
+        </ul>
+        <span class="btn btn-small btn-light btn-glitch">cyccok@naver.com</span>
+    </aside>
+    <main>
+        <div class="body-section">
+            <ul class="half">
+                <li class="btn kakaobank btn-small btn-dark btn-glitch"><a href="kakaobank/index.html" target="_blank">Divin'</a></li>
+                <li class="btn hyperconnect btn-small btn-dark btn-glitch"><a href="hyperconnect/index.html" target="_blank">Ridin'</a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+<script type="text/javascript" src="button.js"></script>
+<script type="text/javascript" src="portfolio.js"></script>
+</html>

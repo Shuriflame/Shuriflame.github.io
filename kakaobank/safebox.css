@@ -6,12 +6,16 @@
     background-image: url(../img/kakaobank/logo_white.svg);
 }
 
-.header_fixed.on .gnb_menu_item {
+.header_fixed.on .gnb_menu_list .gnb_menu_item {
     color: #fff;
 }
 
+.header_fixed .gnb_menu_list:nth-child(2) {
+    border-bottom: 2px solid #000;
+}
+
 .header_fixed.on .gnb_menu_list:nth-child(2) {
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 

@@ -1,18 +1,34 @@
-$(document).ready(function () {
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll === 0) {
-            $(".header_fixed").addClass("on");
-        } else {
-            $(".header_fixed").removeClass("on");
-        }
-    });
-});
+/* $(document).ready(function () {
+}); */
 
 list = document.querySelectorAll('.list');
+headerUl = document.querySelector('.gnb_menu');
+headerFix = document.querySelector('.header_fixed');
+htmlElem = document.querySelector('html');
+
+window.addEventListener('scroll', function () {
+    if (htmlElem.scrollTop === 0) {
+        headerFix.classList.add("on");
+    } else {
+        headerFix.classList.remove("on");
+    }
+});
+headerUl.addEventListener('mouseenter', headerEnter);
+headerUl.addEventListener('mouseleave', headerLeave);
+
 
 for (let i = 0; i < list.length; i++) {
     list[i].addEventListener('click', listClick);
+}
+
+function headerEnter() {
+    headerFix.classList.remove('on');
+}
+
+function headerLeave() {
+    if (htmlElem.scrollTop === 0) {
+        headerFix.classList.add('on');
+    }
 }
 
 function listClick(e) {
@@ -23,7 +39,6 @@ function listClick(e) {
     } else {
         for (let i = 0; i < list.length; i++) {
             if (list[i].classList.contains('on')) {
-                console.log('dljfskl');
                 list[i].classList.remove('on');
                 this.classList.add('on');
             } else {
