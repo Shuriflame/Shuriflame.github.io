@@ -26,6 +26,8 @@ function enterWork(e) {
         e.target.firstChild.textContent = 'kakaobank';
     } else if (e.target.classList.contains('hyperconnect')) {
         e.target.firstChild.textContent = 'hyperconnect';
+    } else if (e.target.classList.contains('naver')) {
+        e.target.firstChild.textContent = 'naver';
     }
 }
 
@@ -33,6 +35,8 @@ function leaveWork(e) {
     if (e.target.classList.contains('kakaobank')) {
         e.target.firstChild.textContent = "DIVIN'";
     } else if (e.target.classList.contains('hyperconnect')) {
+        e.target.firstChild.textContent = "FLYIN'";
+    } else if (e.target.classList.contains('naver')) {
         e.target.firstChild.textContent = "RIDIN'";
     }
 }
