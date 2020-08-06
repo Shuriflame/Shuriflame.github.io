@@ -109,16 +109,6 @@
 	 animation: colorshift-blue 2.6s infinite;
 	 animation-timing-function: step-end;
 }
- body {
-	 margin: 0;
-}
- .body-section {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 flex-wrap: wrap;
-	 height: 100vh;
-}
 
  @keyframes colorshift-red {
 	 0%, 7% {

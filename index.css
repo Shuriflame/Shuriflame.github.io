@@ -1,12 +1,73 @@
 * {font-family: 'Damion', cursive;
 font-family: 'Permanent Marker', cursive;}
 body {position: relative; overflow: hidden;}
+.loading {display: flex; position: fixed; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: #fff; z-index: 999;}
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.loader,
+.loader:before,
+.loader:after {
+    animation: 1s infinite ease-in-out;
+}
+.loader:before,
+.loader:after {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.loader-7 {
+    animation: loader7-1 .7s infinite linear;
+}
+
+.loader-7:before,
+.loader-7:after {
+    content: '';
+    width: 80%;
+    height: 80%;
+    top: 5%;
+}
+.loader-7:before {
+    left: -2%;
+    animation: loader7-2 .7s infinite alternate ease-in-out;
+    transform-origin: 10% 50%;
+    background-color: rgba(4, 0, 255, 0.9);
+}
+.loader-7:after {
+    left: auto;
+    right: -2%;
+    animation: loader7-2 .5s .7s infinite alternate ease-in-out;
+    transform: scale(0);
+    transform-origin: 90% 50%;
+    background-color: rgba(3, 3, 3, 0.9);
+}
+
+@keyframes loader7-1 {
+    0%   { transform: rotate(20deg); }
+    100% { transform: rotate(380deg); }
+}
+
+@keyframes loader7-2 {
+    0%   { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+
+
 header {position: absolute; width: 100%; z-index: 1; text-align: center; line-height: 90px;}
 h2 {max-width: 1038px; min-width: 1036px;}
 
 canvas {position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
 
-aside {position: fixed; top: 0; bottom: 0; right: 0; width: 50px; padding-top: 20px; z-index: 999;}
+aside {position: fixed; top: 0; bottom: 0; right: 0; width: 50px; padding-top: 20px;}
 aside > ul > li {
     width: 27px;
     height: 27px;
@@ -34,6 +95,14 @@ aside > span.btn {
 }
 aside > span.on {
     opacity: 1;
+}
+
+main {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-wrap: wrap;
+	 height: 100vh;
 }
 
 .glitch {
@@ -287,13 +356,17 @@ skew to change the 'thickness' of the glitch.*/
 }
 
 @media screen and (max-width : 700px) {
-    .glitch {font-size: 2em;}
-    /* h1 {padding-top: 10px;} */
-    header {height: 200px; line-height: 200px;}
-    h1 {margin: 0;}
-    aside {width: auto; right: 20px; padding-top: 15px;}
-    aside > ul {overflow: hidden;}
-    aside > ul > li {float: left;}
-    aside > ul > li + li {margin-top: 0; margin-left: 15px;}
-    aside > span.btn {top: 60px; left:-20px;}
+  .glitch {font-size: 2em;}
+  /* h1 {padding-top: 10px;} */
+  header {height: 200px; line-height: 200px;}
+  h1 {margin: 0;}
+  aside {width: auto; right: 20px; bottom: auto; padding-top: 15px;}
+  aside > ul {overflow: hidden;}
+  aside > ul > li {float: left;}
+  aside > ul > li + li {margin-top: 0; margin-left: 15px;}
+  aside > span.btn {top: 60px; left:-20px;}
+}
+
+@media screen and (max-width : 520px) {
+  h1 {line-height: normal; margin-top: 85px;}
 }

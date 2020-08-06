@@ -1,3 +1,9 @@
+$(window).load(
+   setTimeout(() => {
+       $(".loading").fadeOut();
+   }, 2500)
+);
+
 let mail = document.querySelector('.mail');
 let mailPop = document.querySelector('aside > span');
 let btn = document.querySelectorAll('main .btn');
