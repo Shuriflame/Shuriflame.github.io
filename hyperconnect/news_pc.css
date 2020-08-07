@@ -10,19 +10,20 @@ main > section {
     opacity: 0; 
     overflow: hidden;}
 /* main > section > * {transition: all .5s ease;} */
-main > section > h2 {display: inline-block; padding-top: 100px; font-size: 60px; transition: all .4s ease; min-width: 486px;}
+main > section > h1 {display: inline-block; padding-top: 100px; font-size: 60px; transition: all .4s ease; min-width: 486px;}
 main > section > article {width: 530px; height: 600px;}
 main > section > .news_1 {top: 110px; scale: 1.2; transition: all .8s ease;}
 main > section > .news_2 {left:600px; scale: 1.2; transition: all .5s ease;}
+main > section > article > a {display: block;}
 main > section > article img {width: 500px; float: left;}
 main > section > article .date {float: left; writing-mode: vertical-lr;}
 main > section > article h4 {clear: both; padding-top: 30px; font-size: 39px;}
 main > section > article p {margin-top: 10px;font-size: 20px;}
-aside {float: right; width: 20%; text-align: right;}
-aside > h2 {font-size: 29px;}
-aside > h2 + h2 {margin-top: 30px;}
-aside > h2 > a {color: gray;}
-aside > h2.on > a {color: #000;}
+main > nav {float: right; width: 20%; text-align: right;}
+main > nav > ul > li {font-size: 29px;}
+main > nav > ul > li + li {margin-top: 30px;}
+main > nav > ul > li > a {color: gray; font-weight: 700;}
+main > nav > ul > li.on > a {color: #000;}
 .culture article {display: inline-block; position: absolute;}
 .culture .news_1 {left: 0;}
 .culture .news_2 {top: 100px; right: 0;}
@@ -34,7 +35,7 @@ main > section.on > .news_1 {top: 280px; scale: 1;}
 main > section.on > .news_2 {scale: 1;}
 
 @media (max-width: 1838px) {
-    main > section > h2 {transform: translateX(-50%); margin-left: 50%;}
-    main > section > .news_1 {transform: translateX(-50%); margin-left: 50%; top: 0;}
-    main > section > .news_2 {transform: translateX(-50%) translateY(100px); margin-left: 50%; left: 0;}
+    /* main > section > h1 {transform: translateX(-50%); margin-left: 50%;}
+    main > section > .news_1 {transform: translateX(-50%); margin-left: 50%;}
+    main > section > .news_2 {transform: translateX(-50%); margin-left: 50%; top: 0; left: 0;} */
 }

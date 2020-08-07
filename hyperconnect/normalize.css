@@ -348,7 +348,6 @@ template {
   display: none;
 }
 
-
-a:hover, a:focus, a:visited, a:link {
+a {
   color: #000;
 }

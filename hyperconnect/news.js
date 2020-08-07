@@ -3,11 +3,14 @@ const hamburger = document.querySelector('.hamburger_box');
 const headerElem = document.querySelector('.header_wrap');
 const $main = document.querySelector('main');
 const $section = $main.querySelectorAll('main > section');
+const $li = $main.querySelectorAll('main > nav > ul > li');
 const $article = $section[0].querySelectorAll('article');
 
 window.addEventListener('resize', windowCheck);
 window.addEventListener('load', windowCheck);
-$main.addEventListener('click', clickMenu);
+$li.forEach(item => {
+    item.addEventListener('click', clickMenu);
+});
 
 function windowCheck() {
     if (window.innerWidth <= 500) {
@@ -18,7 +21,7 @@ function windowCheck() {
         window.addEventListener('scroll', headerOn);
         $section[0].classList.add('on');
     }
-    articleSet();
+    articleSet($section[0]);
 }
 
 function headerOn() {
@@ -38,34 +41,49 @@ function hamburgerOn() {
     }
 }
 
-function articleSet() {
+function articleSet(sec) {
+    let articleElem = sec.querySelectorAll('article');
     if (window.innerWidth < 1839) {
-        for (let i = 0; i < $article.length; i++) {
-            $article[i].style.transform = 'translate(-50%, ' + ($article[i].clientHeight * ($article.length - (i + 1))) + 'px)';
-            var articleHeight = $article[i].clientHeight * $article.length;
-        }
-        $article[$article.length-1].style.transform = 'translate(-50%, 150px)';
-        for (let i = 0; i < $section.length; i++) {
-            if ($section[i].classList.contains('on')) {
-                $section[i].style.height = articleHeight + 400 + 'px';
+        articleElem.forEach((item, index) => {
+            item.style.transform = `translate(-50%, ${item.style.height * index}px)`;
+        });
+        let articleHeight = articleElem.clientHeight * articleElem.length;
+        articleElem[articleElem.length - 1].style.transform = 'translate(-50%, 150px)';
+        /* for (let i = 0; i < articleElem.length; i++) {
+            articleElem[i].style.transform = 'translate(-50%, ' + (articleElem[i].clientHeight * i) + 'px)';
+            var articleHeight = articleElem[i].clientHeight * articleElem.length;
+        } */
+        $section.forEach(sec => {
+            if (sec.classList.contains('on')) {
+                sec.style.height = `${articleHeight + 400}px`;
             }
-        }
+        });
+        /* for (let i = 0; i < $section.length; i++) {
+            if (sec.classList.contains('on')) {
+                sec.style.height = articleHeight + 400 + 'px';
+            }
+        } */
     } else {
-        for (let i = 0; i < $article.length; i++) {
-            $article[i].style.transform = 'translate(0)';
-        }
+        articleElem.forEach(item => {
+            item.style.transform = 'translate(0)';
+        });
     }
 }
 
 function clickMenu(e) {
     e.preventDefault();
-    if (e.target.parentNode.parentNode.tagName !== 'ASIDE') return;
-    $section.forEach(sec => {
-        sec.classList.remove('on');
-        e.target.parentNode.classList.remove('on');
-        if (e.target.parentNode.className === sec.className) {
+    if (e.target.tagName !== 'A') return;
+
+    $li.forEach(item => {
+        item.classList.remove('on');
+    });
+    
+    $section.forEach(item => {
+        item.classList.remove('on');
+        item.style.height = 0;
+        if (item.className === e.target.parentNode.className) {
+            item.classList.add('on');
             e.target.parentNode.classList.add('on');
-            sec.classList.add('on');
         }
     });
 }
