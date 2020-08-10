@@ -1,9 +1,9 @@
-$(window).load(
-   setTimeout(() => {
-       $(".loading").fadeOut();
-   }, 2500)
-);
-
+// $(window).load(
+//    setTimeout(() => {
+//        $(".loading").fadeOut();
+//    }, 2500)
+// );
+$(".loading").fadeOut();
 let mail = document.querySelector('.mail');
 let mailPop = document.querySelector('aside > span');
 let btn = document.querySelectorAll('main .btn');
@@ -46,3 +46,23 @@ function leaveWork(e) {
         e.target.firstChild.textContent = "RIDIN'";
     }
 }
+
+$('.box').on('mousewheel', function (e) {
+
+    var wheelDelta = e.originalEvent.wheelDelta;
+    console.log(wheelDelta);
+    if (wheelDelta > 0) {
+
+        console.log("up");
+
+        $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+
+    } else {
+
+        console.log("down");
+
+        $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+
+    }
+
+});
