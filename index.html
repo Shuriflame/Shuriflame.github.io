@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>웹퍼블리셔 최한슬 포트폴리오</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="normalize.css" />
@@ -24,6 +26,7 @@
             </filter>
         </defs>
     </svg>
+    
 </head>
 <body>
     <div class="loading">
@@ -31,7 +34,6 @@
     </div>
     <header>
         <h1 class="glitch" data-text="Seul's Portfolio">Seul's Portfolio</h1>
-        <video src="img/logo_f5.mp4" autoplay loop muted></video>
     </header>
     <aside>
         <ul>
@@ -43,12 +45,55 @@
         <span class="btn btn-small btn-light btn-glitch">cyccok@naver.com</span>
     </aside>
     <main>
-        <ul class="half">
-            <li class="btn kakaobank btn-small btn-dark btn-glitch"><a href="kakaobank/index.html" target="_blank">Divin'</a></li>
-            <li class="btn naver btn-small btn-dark btn-glitch"><a href="naver/index.html" target="_blank">Ridin'</a></li>
-            <li class="btn hyperconnect btn-small btn-dark btn-glitch"><a href="hyperconnect/index.html" target="_blank">Flyin'</a></li>
-        </ul>
-        <ul class="box">
+        <div id="content_1" class="content_2">
+            <ul class="works">
+                <li id="kakaobank" class="btn btn-small btn-dark btn-glitch"><a href="">kakaobank</a></li>
+                <li id="naver" class="btn btn-small btn-dark btn-glitch"><a href="">naver</a></li>
+                <li id="hyperconnect" class="btn btn-small btn-dark btn-glitch"><a href="">hyperconnect</a></li>
+            </ul>
+            <ul class="detail kakaobank">
+                <li><a href="kakaobank/index.html" target="_blank"></a></li>
+                <li><a href="kakaobank/company_map.html" target="_blank"></a></li>
+                <li><a href="kakaobank/safebox.html" target="_blank"></a></li>
+            </ul>
+            <ul class="detail naver">
+                <li><a href="naver/index.html" target="_blank"></a></li>
+            </ul>
+            <ul class="detail hyperconnect">
+                <li><a href="hyperconnect/index.html" target="_blank"></a></li>
+                <li><a href="hyperconnect/news.html" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div id="content_2" class="content">
+            <video src="img/logo_f5.mp4" autoplay loop muted></video>
+            <div class="left">
+                <div>
+                    <span class="photo"></span>
+                    <span class="circle"></span>
+                    <span class="rect"></span>
+                    <span class="vector"></span>
+                </div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="right">
+                <span></span>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content_3" class="content">
+
+        </div>
+        <!-- <ul class="box">
             <li></li>
             <li></li>
             <li></li>
@@ -83,7 +128,7 @@
             <li></li>
             <li></li>
             <li></li>
-        </ul>
+        </ul> -->
     </main>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

@@ -1,7 +1,7 @@
 let liq1,liq2,liq3;
-
 function setup() {
-	createCanvas(window.innerWidth, window.innerHeight);
+	var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+	myCanvas.parent('content_1');
 	liq1 = new Liq();
 	liq2 = new Liq();
 	liq3 = new Liq();
