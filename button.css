@@ -1,4 +1,4 @@
-.half {width: 164px;}
+.works {width: 164px;}
 .btn {
 	 -webkit-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	 -moz-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -22,11 +22,11 @@
 	 vertical-align: bottom;
 	 border-radius: 10px;
 }
-.half li + li {
+.works li + li {
     margin-top: 20px;
 }
 .btn a {font-family: 'Permanent Marker', cursive;
-     font-size: 20px;
+     font-size: 21px;
 	 color: #fff;
 	 display: block;
 	 width: 100%;
@@ -108,16 +108,6 @@
 	 background-color: #3ffeff;
 	 animation: colorshift-blue 2.6s infinite;
 	 animation-timing-function: step-end;
-}
- body {
-	 margin: 0;
-}
- .body-section {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 flex-wrap: wrap;
-	 height: 100vh;
 }
 
  @keyframes colorshift-red {
