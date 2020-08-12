@@ -73,15 +73,15 @@ function articleSet(sec) {
 function clickMenu(e) {
     e.preventDefault();
     if (e.target.tagName !== 'A') return;
-
     $li.forEach(item => {
         item.classList.remove('on');
     });
     
     $section.forEach(item => {
         item.classList.remove('on');
-        item.style.height = 0;
         if (item.className === e.target.parentNode.className) {
+
+            console.log('a');
             item.classList.add('on');
             e.target.parentNode.classList.add('on');
         }

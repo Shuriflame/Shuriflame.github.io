@@ -268,6 +268,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   margin-top: 10px;
 }
 
+.left > div > span.vector { animation: flow 2s ease infinite;}
 .left > div > span.vector2 {
   position: absolute;
   width: 130px;
@@ -290,7 +291,17 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
     rotate: 360deg;
   }
 }
-
+@keyframes flow {
+  0% {
+    rotate: 20deg;
+  }
+  50% {
+    rotate: -10deg;
+  }
+  100% {
+    rotate: 20deg;
+  }
+}
 @keyframes bounce {
   0% {
     transform: translateY(0px) translateX(0px);
