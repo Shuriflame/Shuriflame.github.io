@@ -1,7 +1,5 @@
 $(window).load(
-   setTimeout(() => {
-       $(".loading").fadeOut();
-   }, 100)
+    $(".loading").fadeOut()
 );
 const mail = document.querySelector('.mail');
 const mailPop = document.querySelector('aside > span');
