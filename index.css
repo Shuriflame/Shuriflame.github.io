@@ -371,7 +371,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 #content_4 > .icon > img {transition: all .5s ease;}
 #content_4 > .photo {top: 100px; left: 200px;}
 #content_4 > .illust {top: 200px; left: 500px; animation-duration: 3s;}
-#content_4 > .ppt {box-shadow: -5px 10px 25px #000; border-radius: 30px; width: 110px; height: 110px; top: 400px; left: 300px; animation-duration: 3.5s;}
+#content_4 > .ppt {top: 400px; left: 300px; animation-duration: 3.5s;}
 #content_4 > .html {top: 170px; left: 850px; animation-duration: 5.4s;}
 #content_4 > .css {top: 450px; left: 750px;}
 #content_4 > .js {top: 300px; left: 1150px; animation-duration: 3s;}
