@@ -1,18 +1,18 @@
 /* 기본 */
 * {font-family: 'Damion', cursive; font-family: 'Permanent Marker', cursive;}
-body {position: relative; overflow: hidden;}
+body {position: relative; overflow: hidden; overflow-x: hidden; overflow-y: scroll;}
 
 /* 레이아웃 */
 header {position: absolute; width: 100%; z-index: 1; text-align: center; line-height: 90px; overflow: hidden;}
 canvas {position: relative; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
-aside {position: fixed; top: 0; bottom: 0; right: 0; width: 50px; padding-top: 20px;}
-main {height: 100vh; overflow-x: hidden; overflow-y: scroll;}
-.content {background-color: #f5f5f5;}
+aside {position: fixed; top: 0; bottom: 0; right: 0; width: 50px; padding-top: 20px; z-index: 999;}
+main {height: 100vh;}
 #content_1 {height: 100%; display: flex; position: relative; justify-content: center; align-items: center;}
 #content_2 {position: relative; height: 100%;}
+#content_3 {position: relative; height: 100%;}
 
 /* 로딩화면 */
-.loading {display: flex; position: fixed; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: #fff; z-index: 1;}
+.loading {display: flex; position: fixed; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: #fff; z-index: 99999;}
 .loader {
     width: 100px;
     height: 100px;
@@ -188,14 +188,23 @@ main .box {white-space: nowrap; overflow-x: scroll; overflow-y: hidden;}
 main .box2 {white-space: normal;}
 main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display: inline-block;}
 
-/* 2번째 페이지 */
-#content_2 {border: 3px solid darkgray;}
-#content_2 > video {position: absolute; top: 40px; left: 40px; width: 50px; height: 50px;}
-#content_2 > div {float: left; width: 50%; height: 100%;}
-#content_2 > .left {border: 3px solid red;}
-#content_2 > .right {border: 3px solid blue;}
 
-.left > div {width: 400px; height: 400px; margin: 100px 0 0 120px; position: relative;}
+/* 2번째 페이지 */
+#content_2 {position: relative;}
+.logo {line-height: 0.8; margin-top: 90px;}
+.discript {font-family: 'Song Myung', serif; font-size: 3rem; position: absolute; top: 200px; right: 400px;}
+.discript > span {font-family: 'Song Myung'; font-size: 1.7rem; border: 1px solid #000; border-radius: 5px;}
+.discript > strong {font-family: 'Song Myung'; font-size: 2.3rem;border: none; font-weight: lighter;}
+.discript > p {font-family: 'Song Myung', serif; font-size: 1.5rem; line-height: 1.4;}
+
+
+
+/* 3번째 페이지 */
+#content_3 {background-color: #eef1fd;}
+#content_3 > video {position: absolute; top: 40px; left: 40px; width: 50px; height: 50px;}
+#content_3 > div {float: left; width: 50%; height: 100%;}
+
+.left > div {width: 400px; height: 400px; margin: 100px 0 0 230px; position: relative;}
 .left > div > span.photo {
   display: inline-block;
   position: absolute;
@@ -206,6 +215,8 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   background-size: cover;
   background-position: center;
   box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.25);
+  top: 20px;
+  z-index: 1;
 }
 .left > div > span.circle {
   display: inline-block;
@@ -213,23 +224,123 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   background: url(img/circle.png) no-repeat;
   width: 66px;
   height: 66px;
-  left: 312px;
-  top: 18px;
+  left: 290px;
+  top: 15px;
+  z-index: 1;
 }
 .left > div > span.rect {
   display: inline-block;
   position: absolute;
-  background: url(img/rectangle.png) no-repeat;
+  background-color: #9e80d4;
   width: 233px;
   height: 261px;
-  left: 240.54px;
-  top: 24px;
+  transform: rotate(20deg);
+  left: 150px;
+  top: 50px;
+  z-index: 0;
+}
+.left > div > span.vector {
+  display: inline-block;
+  position: absolute;
+  width: 210px;
+  height: 50px;
+  top: 300px;
+  left: 190px;
+  background: url(img/vector.png) no-repeat;
+  background-size: contain;
 }
 
-.right > ul {border: 3px solid teal;}
+.left > ul {
+  width: 200px;
+  margin-left: 240px;
+}
+.left > ul > li {
+  border-bottom: 1px solid #000;
+  font-family: 'Nanumsquare';
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 5px;
+  text-align: right;
+  color: rgb(148, 148, 148);
+}
+.left > ul > li + li {
+  margin-top: 10px;
+}
+
+.left > div > span.vector2 {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  left: 200px;
+  top: 550px;
+  background: url(img/vector2.png) no-repeat;
+  background-size: contain;
+}
+
+.right > span {background-color: #666; position: absolute; display: inline-block; width: 10px; height: 700px; border-radius: 30px; top: 80px; right: 200px;}
+.right > span {
+  background: -webkit-linear-gradient(top, #aa4b6b, #8456aa, #543b99, #8456aa, #aa4b6b);
+  background: linear-gradient(top, #aa4b6b, #8456aa, #543b99, #8456aa, #aa4b6b);
+  background-size: 50px 1000px;
+  color: transparent;
+  -webkit-animation: animate-logo;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 7s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.right > ul {
+  margin: 200px 0 0 200px;
+  width: 370px;
+}
+.right > ul > li {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-family: 'Nanumsquare';
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+}
+.right > ul > li > strong {
+  font-family: 'Nanumsquare';
+  font-weight: 900;
+}
+.right > ul > li + li {
+  margin-top: 60px;
+}
 
 
 /* 외부소스 */
+.logo {
+  position: absolute;
+  font-size: 20rem;
+  text-align: center;
+  background: -webkit-linear-gradient(left, #12c2e9, #c471ed, #f64f59, #c471ed, #12c2e9);
+  background: linear-gradient(left, #12c2e9, #c471ed, #f64f59, #c471ed, #12c2e9);
+  background-size: 3200px 200px;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-animation: animate-logo;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 7s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  transition: font-size 500ms ease-in-out;
+}
+@-webkit-keyframes animate-logo {
+  0% {
+    background-position: 0 3200px;
+  }
+  100% {
+    background-position: 3200px 0;
+  }
+}
+
 .glitch {
   position: relative;
   color: #000;

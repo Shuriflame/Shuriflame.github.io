@@ -1,9 +1,8 @@
-// $(window).load(
-//    setTimeout(() => {
-//        $(".loading").fadeOut();
-//    }, 2500)
-// );
-$(".loading").fadeOut();
+$(window).load(
+   setTimeout(() => {
+       $(".loading").fadeOut();
+   }, 100)
+);
 const mail = document.querySelector('.mail');
 const mailPop = document.querySelector('aside > span');
 const btn = document.querySelectorAll('main .btn');
