@@ -9,7 +9,6 @@ const btn = document.querySelectorAll('main .btn');
 const detailElem = document.querySelectorAll('.detail');
 const btnElem = document.querySelectorAll('.works > li');
 
-
 mail.addEventListener('click', clickWork);
 
 for (let i = 0; i < btn.length; i++) {

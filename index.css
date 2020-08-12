@@ -8,8 +8,7 @@ canvas {position: relative; top: 0; left: 0; z-index: -1; width: 100%; height: 1
 aside {position: fixed; top: 0; bottom: 0; right: 0; width: 50px; padding-top: 20px; z-index: 999;}
 main {height: 100vh;}
 #content_1 {height: 100%; display: flex; position: relative; justify-content: center; align-items: center;}
-#content_2 {position: relative; height: 100%;}
-#content_3 {position: relative; height: 100%;}
+.content {position: relative; height: 100%; overflow: hidden;}
 
 /* 로딩화면 */
 .loading {display: flex; position: fixed; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: #fff; z-index: 99999;}
@@ -191,8 +190,8 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 
 /* 2번째 페이지 */
 #content_2 {position: relative;}
-.logo {line-height: 0.8; margin-top: 90px;}
-.discript {font-family: 'Song Myung', serif; font-size: 3rem; position: absolute; top: 200px; right: 400px;}
+#content_2 > .logo {line-height: 0.8; margin-top: 90px; font-size: 25rem; margin-left: -50px;}
+.discript {font-family: 'Song Myung', serif; font-size: 3rem; position: absolute; top: 200px; right: 500px;}
 .discript > span {font-family: 'Song Myung'; font-size: 1.7rem; border: 1px solid #000; border-radius: 5px;}
 .discript > strong {font-family: 'Song Myung'; font-size: 2.3rem;border: none; font-weight: lighter;}
 .discript > p {font-family: 'Song Myung', serif; font-size: 1.5rem; line-height: 1.4;}
@@ -204,7 +203,8 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 #content_3 > video {position: absolute; top: 40px; left: 40px; width: 50px; height: 50px;}
 #content_3 > div {float: left; width: 50%; height: 100%;}
 
-.left > div {width: 400px; height: 400px; margin: 100px 0 0 230px; position: relative;}
+.left {border-right: 3px dashed rgba(137, 43, 226, 0.301);}
+.left > div {width: 400px; height: 400px; margin: 100px 0 0 330px; position: relative;}
 .left > div > span.photo {
   display: inline-block;
   position: absolute;
@@ -252,7 +252,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 
 .left > ul {
   width: 200px;
-  margin-left: 240px;
+  margin-left: 300px;
 }
 .left > ul > li {
   border-bottom: 1px solid #000;
@@ -262,7 +262,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   font-weight: 400;
   padding-bottom: 5px;
   text-align: right;
-  color: rgb(148, 148, 148);
+  color: rgb(0, 0, 0);
 }
 .left > ul > li + li {
   margin-top: 10px;
@@ -276,6 +276,34 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   top: 550px;
   background: url(img/vector2.png) no-repeat;
   background-size: contain;
+}
+
+.left > div > span.circle {
+  animation: bounce 3s ease-in-out infinite;
+}
+.left > div > span.vector2 {
+  animation: roll 3s linear infinite;
+}
+
+@keyframes roll {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(50px) translateX(30px);
+  }
+  50% {
+    transform: translateY(30px) translateX(50px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
 }
 
 .right > span {background-color: #666; position: absolute; display: inline-block; width: 10px; height: 700px; border-radius: 30px; top: 80px; right: 200px;}
@@ -293,10 +321,11 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 }
 
 .right > ul {
-  margin: 200px 0 0 200px;
-  width: 370px;
+  margin: 200px 0 0 250px;
+  width: 440px;
 }
 .right > ul > li {
+  position: relative;
   padding-top: 10px;
   padding-left: 20px;
   font-family: 'Nanumsquare';
@@ -309,11 +338,61 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   font-family: 'Nanumsquare';
   font-weight: 900;
 }
+.right > ul > li > p {font-family: 'Nanumsquare'; font-size: 1rem;}
 .right > ul > li + li {
   margin-top: 60px;
 }
+.right > ul > li::after {
+  content: '';
+  display: block;
+  width: 50px; height: 50px;
+  position: absolute;
+  top: -30px; right: -85px;
+  background-image: url(img/001-coins.svg);
+}
+.right > ul > li:nth-child(2)::after {
+  background-image: url(img/002-grocery.svg);
+}
+.right > ul > li:nth-child(3)::after {
+  background-image: url(img/003-presentation.svg);
+}
+.right > ul > li:nth-child(4)::after {
+  background-image: url(img/004-check.svg);
+}
+
+#content_3 > .middle {display: inline-block; position: absolute; top: 50%; left: 0; writing-mode: vertical-lr; margin: 0; line-height: 0.75; transform: translateY(-50%);}
 
 
+/* 4번째페이지 */
+#content_4 > .middle {display: inline-block; position: absolute; top: 50%; right: 0; writing-mode: vertical-lr; margin: 0; line-height: 0.78; transform: translateY(-50%) rotate(180deg);}
+#content_4 {background: url(img/2.gif) no-repeat; background-size: cover;}
+#content_4 > .icon {width: 130px; height: 130px; position: absolute; animation: float 4s ease-in-out infinite;}
+#content_4 > .icon > img {width: 100%;}
+#content_4 > .icon > img {transition: all .5s ease;}
+#content_4 > .photo {top: 100px; left: 200px;}
+#content_4 > .illust {top: 200px; left: 500px; animation-duration: 3s;}
+#content_4 > .ppt {box-shadow: -5px 10px 25px #000; border-radius: 30px; width: 110px; height: 110px; top: 400px; left: 300px; animation-duration: 3.5s;}
+#content_4 > .html {top: 170px; left: 850px; animation-duration: 5.4s;}
+#content_4 > .css {top: 450px; left: 750px;}
+#content_4 > .js {top: 300px; left: 1150px; animation-duration: 3s;}
+#content_4 > .android {top: 700px; left: 900px; animation-duration: 3.7s;}
+#content_4 > .vue {top: 650px; left: 1200px; animation-duration: 2.8s;}
+#content_4 > .sql {top: 650px; left: 150px; animation-duration: 4.1s;}
+#content_4 > .java {top: 700px; left: 500px; animation-duration: 4.7s;}
+/* #content_4 > .icon:hover {transform: scale( 1.5 );} */
+#content_4 > .icon:hover img {transform: scale(1.2);}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
 /* 외부소스 */
 .logo {
   position: absolute;
@@ -344,7 +423,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 .glitch {
   position: relative;
   color: #000;
-  font-size: 3em;
+  font-size: 5em;
   letter-spacing: .5em;
   /* Animation provies a slight random skew. Check bottom of doc
   for more information on how to random skew. */
