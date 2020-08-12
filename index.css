@@ -283,7 +283,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   animation: bounce 3s ease-in-out infinite;
 }
 .left > div > span.vector2 {
-  animation: roll 3s linear infinite;
+  animation: roll 5s linear infinite;
 }
 
 @keyframes roll {
@@ -293,13 +293,13 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 }
 @keyframes flow {
   0% {
-    rotate: 20deg;
+    rotate: 10deg;
   }
   50% {
     rotate: -10deg;
   }
   100% {
-    rotate: 20deg;
+    rotate: 10deg;
   }
 }
 @keyframes bounce {
