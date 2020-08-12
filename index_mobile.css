@@ -22,3 +22,15 @@
 .right > ul > li > p {font-size: 0.8rem;}
 #content_3 {height: 1300px;}
 #content_3 > .middle {top: 50px; font-size: 7rem; transform: unset;}
+#content_4 {height: 880px;}
+#content_4 > .middle {top: 150px; font-size: 7rem;}
+#content_4 > .photo {width: 70px; height: 70px; top: 80px; left: 100px;}
+#content_4 > .illust {width: 70px; height: 70px; top: 180px; left: 250px;}
+#content_4 > .ppt {width: 70px; height: 70px; top: 250px; left: 100px;}
+#content_4 > .html {width: 70px; height: 70px; top: 350px; left: 300px;}
+#content_4 > .css {width: 70px; height: 70px; top: 410px; left: 150px;}
+#content_4 > .js {width: 70px; height: 70px; top: 540px; left: 50px;}
+#content_4 > .android {width: 70px; height: 70px; top: 530px; left: 270px;}
+#content_4 > .vue {width: 70px; height: 70px; top: 630px; left: 1200px;}
+#content_4 > .sql {width: 70px; height: 70px; top: 670px; left: 150px;}
+#content_4 > .java {width: 70px; height: 70px; top: 680px; left: 300px;}
