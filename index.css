@@ -320,7 +320,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 .right > span {
   position: absolute;
   display: inline-block;
-  top: 80px; left: 725px;
+  top: 80px; left: 645px;
   width: 10px; height: 700px;
   border-radius: 30px;
   background: -webkit-linear-gradient(top, #aa4b6b, #8456aa, #543b99, #8456aa, #aa4b6b);
@@ -331,7 +331,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 }
 
 .right > ul {
-  margin: 200px 0 0 260px;
+  margin: 200px 0 0 150px;
   width: 440px;
 }
 .right > ul > li {
