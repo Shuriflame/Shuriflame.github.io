@@ -7,8 +7,11 @@ header {position: absolute; width: 100%; z-index: 1; text-align: center; line-he
 canvas {position: relative; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
 aside {position: fixed; top: 0; bottom: 0; right: 0; width: 50px; padding-top: 20px; z-index: 999;}
 main {height: 100vh;}
-#content_1 {height: 100%; display: flex; position: relative; justify-content: center; align-items: center;}
-.content {position: relative; height: 100%; overflow: hidden;}
+.content {position: relative; overflow: hidden;}
+#content_1 {height:100%; display: flex; justify-content: center; align-items: center;}
+#content_2 {height: 1000px;}
+#content_3 {height: 1000px;}
+#content_4 {height: 1000px;}
 
 /* 로딩화면 */
 .loading {display: flex; position: fixed; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: #fff; z-index: 99999;}
@@ -189,9 +192,8 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 
 
 /* 2번째 페이지 */
-#content_2 {position: relative;}
 #content_2 > .logo {line-height: 0.8; margin-top: 90px; font-size: 25rem; margin-left: -50px;}
-.discript {font-family: 'Song Myung', serif; font-size: 3rem; position: absolute; top: 200px; right: 500px;}
+.discript {font-family: 'Song Myung', serif; font-size: 3rem; position: absolute; top: 50%; right: 30%; transform: translateY(-50%);}
 .discript > span {font-family: 'Song Myung'; font-size: 1.7rem; border: 1px solid #000; border-radius: 5px;}
 .discript > strong {font-family: 'Song Myung'; font-size: 2.3rem;border: none; font-weight: lighter;}
 .discript > p {font-family: 'Song Myung', serif; font-size: 1.5rem; line-height: 1.4;}
@@ -242,12 +244,13 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 .left > div > span.vector {
   display: inline-block;
   position: absolute;
-  width: 210px;
-  height: 50px;
+  width: 170px;
+  height: 20px;
   top: 300px;
   left: 190px;
-  background: url(img/vector.png) no-repeat;
-  background-size: contain;
+  background: url(img/vector.png) repeat-x;
+  background-size: cover;
+  -webkit-animation: flow 3s linear infinite;
 }
 
 .left > ul {
@@ -268,7 +271,6 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   margin-top: 10px;
 }
 
-.left > div > span.vector { animation: flow 2s ease infinite;}
 .left > div > span.vector2 {
   position: absolute;
   width: 130px;
@@ -276,33 +278,30 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   left: 200px;
   top: 550px;
   background: url(img/vector2.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .left > div > span.circle {
-  animation: bounce 3s ease-in-out infinite;
+  -webkit-animation: bounce 3s ease-in-out infinite;
 }
 .left > div > span.vector2 {
-  animation: roll 5s linear infinite;
+  -webkit-animation: roll 5s linear infinite;
 }
 
-@keyframes roll {
+@-webkit-keyframes roll {
   100% {
-    rotate: 360deg;
+    transform: rotate(360deg);
   }
 }
-@keyframes flow {
+@-webkit-keyframes flow {
   0% {
-    rotate: 10deg;
-  }
-  50% {
-    rotate: -10deg;
+    background-position: -100px 0;
   }
   100% {
-    rotate: 10deg;
+    background-position: 100px 0;
   }
 }
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
     transform: translateY(0px) translateX(0px);
   }
@@ -317,22 +316,22 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   }
 }
 
-.right > span {background-color: #666; position: absolute; display: inline-block; width: 10px; height: 700px; border-radius: 30px; top: 80px; right: 200px;}
+.right {position: relative; overflow: hidden;}
 .right > span {
+  position: absolute;
+  display: inline-block;
+  top: 80px; left: 725px;
+  width: 10px; height: 700px;
+  border-radius: 30px;
   background: -webkit-linear-gradient(top, #aa4b6b, #8456aa, #543b99, #8456aa, #aa4b6b);
   background: linear-gradient(top, #aa4b6b, #8456aa, #543b99, #8456aa, #aa4b6b);
   background-size: 50px 1000px;
   color: transparent;
-  -webkit-animation: animate-logo;
-  -webkit-animation-delay: 0;
-  -webkit-animation-duration: 7s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation: animate-logo 5s linear infinite forwards;
 }
 
 .right > ul {
-  margin: 200px 0 0 250px;
+  margin: 200px 0 0 260px;
   width: 440px;
 }
 .right > ul > li {
@@ -377,23 +376,23 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 /* 4번째페이지 */
 #content_4 > .middle {display: inline-block; position: absolute; top: 50%; right: 0; writing-mode: vertical-lr; margin: 0; line-height: 0.78; transform: translateY(-50%) rotate(180deg);}
 #content_4 {background: url(img/2.gif) no-repeat; background-size: cover;}
-#content_4 > .icon {width: 130px; height: 130px; position: absolute; animation: float 4s ease-in-out infinite;}
+#content_4 > .icon {width: 130px; height: 130px; position: absolute; -webkit-animation: float 4s ease-in-out infinite;}
 #content_4 > .icon > img {width: 100%;}
 #content_4 > .icon > img {transition: all .5s ease;}
 #content_4 > .photo {top: 100px; left: 200px;}
-#content_4 > .illust {top: 200px; left: 500px; animation-duration: 3s;}
-#content_4 > .ppt {top: 400px; left: 300px; animation-duration: 3.5s;}
-#content_4 > .html {top: 170px; left: 850px; animation-duration: 5.4s;}
+#content_4 > .illust {top: 200px; left: 500px; -webkit-animation-duration: 3s;}
+#content_4 > .ppt {top: 400px; left: 300px; -webkit-animation-duration: 3.5s;}
+#content_4 > .html {top: 170px; left: 850px; -webkit-animation-duration: 5.4s;}
 #content_4 > .css {top: 450px; left: 750px;}
-#content_4 > .js {top: 300px; left: 1150px; animation-duration: 3s;}
-#content_4 > .android {top: 700px; left: 900px; animation-duration: 3.7s;}
-#content_4 > .vue {top: 650px; left: 1200px; animation-duration: 2.8s;}
-#content_4 > .sql {top: 650px; left: 150px; animation-duration: 4.1s;}
-#content_4 > .java {top: 700px; left: 500px; animation-duration: 4.7s;}
+#content_4 > .js {top: 300px; left: 1150px; -webkit-animation-duration: 3s;}
+#content_4 > .android {top: 700px; left: 900px; -webkit-animation-duration: 3.7s;}
+#content_4 > .vue {top: 650px; left: 1200px; -webkit-animation-duration: 2.8s;}
+#content_4 > .sql {top: 650px; left: 150px; -webkit-animation-duration: 4.1s;}
+#content_4 > .java {top: 700px; left: 500px; -webkit-animation-duration: 4.7s;}
 /* #content_4 > .icon:hover {transform: scale( 1.5 );} */
 #content_4 > .icon:hover img {transform: scale(1.2);}
 
-@keyframes float {
+@-webkit-keyframes float {
 	0% {
 		transform: translatey(0px);
 	}
@@ -473,7 +472,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 a percentage for the specific step. It then generates a random clip
 box to be used for the random glitch effect. Also adds a very subtle
 skew to change the 'thickness' of the glitch.*/
-@keyframes glitch-anim {
+@-webkit-keyframes glitch-anim {
   0% {
     clip: rect(14px, 9999px, 23px, 0);
     transform: skew(0.13deg);
@@ -559,7 +558,7 @@ skew to change the 'thickness' of the glitch.*/
     transform: skew(0.95deg);
   }
 }
-@keyframes glitch-anim2 {
+@-webkit-keyframes glitch-anim2 {
   0% {
     clip: rect(81px, 9999px, 78px, 0);
     transform: skew(0.04deg);
@@ -645,7 +644,7 @@ skew to change the 'thickness' of the glitch.*/
     transform: skew(0.26deg);
   }
 }
-@keyframes glitch-skew {
+@-webkit-keyframes glitch-skew {
   0% {
     transform: skew(-2deg);
   }

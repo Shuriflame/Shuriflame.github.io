@@ -9,16 +9,16 @@ function setup() {
 
 function draw() {
 	blendMode(BLEND);
-	background(245);
+	background(255);
 	blendMode(MULTIPLY);
 	noStroke();
 	translate(width/2,height/2);
 	
 	fill(0,150,240);
 	liq1.drawLiq();
-	fill(200,240,0);
+	fill(128,0,325);
 	liq2.drawLiq();
-	fill(0,0,240);
+	fill(0,255,128);
 	liq3.drawLiq();
 }
 
