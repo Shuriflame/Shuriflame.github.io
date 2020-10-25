@@ -93,5 +93,5 @@ function hoverImg() {
     var arrLis = Array.from(liVision);
     var crrIndex = arrLis.indexOf(this);
     
-    imgVision.src = '../img/hyperconnect/hover-' + crrIndex + '.svg';    
+    imgVision.src = 'img/hover-' + crrIndex + '.svg';    
 }

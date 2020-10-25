@@ -1,8 +1,8 @@
 $(window).load(
-    // setTimeout(() => {
-    // }, 2500)
-    
+    setTimeout(() => {
         $(".loading").fadeOut()
+    }, 2500)
+    
 );
 const mail = document.querySelector('.mail');
 const mailPop = document.querySelector('aside > span');
@@ -38,7 +38,6 @@ function popUp(e) {
 }
 
 function clickWork(e) {
-    e.preventDefault();
     if (e.target.tagName !== 'A') return;
     if (mailPop.classList.contains('on')) {
         mailPop.classList.remove('on');

@@ -684,7 +684,6 @@ skew to change the 'thickness' of the glitch.*/
 /* 반응형 */
 @media screen and (max-width : 700px) {
   .glitch {font-size: 2em;}
-  /* h1 {padding-top: 10px;} */
   header {height: 200px; line-height: 200px;}
   h1 {margin: 0;}
   aside {width: auto; right: 20px; bottom: auto; padding-top: 15px;}
