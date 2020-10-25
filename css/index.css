@@ -69,11 +69,11 @@ main {height: 100vh;}
 /* 헤더 */
 
 /* 어사이드 */
-aside > ul > li {width: 27px; height: 27px; background: url(img/email.svg) no-repeat;}
+aside > ul > li {width: 27px; height: 27px; background: url(../img/email.svg) no-repeat;}
 aside > ul > li > a {display: block; width: 100%; height: 100%;}
-aside > ul > li:nth-child(2) {background-image: url(img/facebook.svg);}
-aside > ul > li:nth-child(3) {background-image: url(img/linkedin.svg);}
-aside > ul > li:nth-child(4) {background-image: url(img/github.svg);}
+aside > ul > li:nth-child(2) {background-image: url(../img/facebook.svg);}
+aside > ul > li:nth-child(3) {background-image: url(../img/linkedin.svg);}
+aside > ul > li:nth-child(4) {background-image: url(../img/github.svg);}
 aside > ul > li + li {margin-top: 20px;}
 aside > span.btn {
     position: absolute;
@@ -132,22 +132,22 @@ aside > span.on {opacity: 1;}
 
 .kakaobank {background-color: rgba(87, 87, 87, 0.562);}
 .kakaobank > li:first-child {
-  background: url(img/kakao-detail-index.png) no-repeat;
+  background: url(../img/kakao-detail-index.png) no-repeat;
   background-size: cover;
 }
 
 .kakaobank > li:nth-child(2) {
-  background: url(img/kakao-detail-map.png) no-repeat;
+  background: url(../img/kakao-detail-map.png) no-repeat;
   background-size: cover;
 }
 
 .kakaobank > li:nth-child(3) {
-  background: url(img/kakao-detail-safebox.png) no-repeat;
+  background: url(../img/kakao-detail-safebox.png) no-repeat;
   background-size: cover;
 }
 
 .naver > li:first-child {
-  background: url(img/naver-main.png) no-repeat; background-size: cover;
+  background: url(../img/naver-main.png) no-repeat; background-size: cover;
 }
 .naver > li:first-child > a:hover::before {
   display: block;
@@ -159,12 +159,12 @@ aside > span.on {opacity: 1;}
 }
 
 .hyperconnect > li:first-child {
-  background: url(img/hyperconnect-main.png) no-repeat;
+  background: url(../img/hyperconnect-main.png) no-repeat;
   background-size: cover;
 }
 
 .hyperconnect > li:nth-child(2) {
-  background: url(img/hyperconnect-news.png) no-repeat;
+  background: url(../img/hyperconnect-news.png) no-repeat;
   background-size: cover;
 }
 
@@ -213,7 +213,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   width: 278px;
   height: 278px;
   border-radius: 100%;
-  background: url(img/me.jpg) no-repeat;
+  background: url(../img/me.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.25);
@@ -223,7 +223,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 .left > div > span.circle {
   display: inline-block;
   position: absolute;
-  background: url(img/circle.png) no-repeat;
+  background: url(../img/circle.png) no-repeat;
   width: 66px;
   height: 66px;
   left: 290px;
@@ -248,7 +248,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   height: 20px;
   top: 300px;
   left: 190px;
-  background: url(img/vector.png) repeat-x;
+  background: url(../img/vector.png) repeat-x;
   background-size: cover;
   -webkit-animation: flow 3s linear infinite;
 }
@@ -277,7 +277,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   height: 130px;
   left: 200px;
   top: 550px;
-  background: url(img/vector2.png) no-repeat;
+  background: url(../img/vector2.png) no-repeat;
   background-size: cover;
 }
 
@@ -358,16 +358,16 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
   width: 50px; height: 50px;
   position: absolute;
   top: -30px; right: -85px;
-  background-image: url(img/001-coins.svg);
+  background-image: url(../img/001-coins.svg);
 }
 .right > ul > li:nth-child(2)::after {
-  background-image: url(img/002-grocery.svg);
+  background-image: url(../img/002-grocery.svg);
 }
 .right > ul > li:nth-child(3)::after {
-  background-image: url(img/003-presentation.svg);
+  background-image: url(../img/003-presentation.svg);
 }
 .right > ul > li:nth-child(4)::after {
-  background-image: url(img/004-check.svg);
+  background-image: url(../img/004-check.svg);
 }
 
 #content_3 > .middle {display: inline-block; position: absolute; top: 50%; left: 0; writing-mode: vertical-lr; margin: 0; line-height: 0.75; transform: translateY(-50%);}
@@ -375,7 +375,7 @@ main .box > li {width: 200px; height: 200px; background-color: #ff00c1; display:
 
 /* 4번째페이지 */
 #content_4 > .middle {display: inline-block; position: absolute; top: 50%; right: 0; writing-mode: vertical-lr; margin: 0; line-height: 0.78; transform: translateY(-50%) rotate(180deg);}
-#content_4 {background: url(img/2.gif) no-repeat; background-size: cover;}
+#content_4 {background: url(../img/2.gif) no-repeat; background-size: cover;}
 #content_4 > .icon {width: 130px; height: 130px; position: absolute; -webkit-animation: float 4s ease-in-out infinite;}
 #content_4 > .icon > img {width: 100%;}
 #content_4 > .icon > img {transition: all .5s ease;}

@@ -38,6 +38,7 @@ function popUp(e) {
 }
 
 function clickWork(e) {
+    e.preventDefault();
     if (e.target.tagName !== 'A') return;
     if (mailPop.classList.contains('on')) {
         mailPop.classList.remove('on');
