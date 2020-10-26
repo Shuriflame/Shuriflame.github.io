@@ -37,6 +37,7 @@ header.on .header_wrap {
 
 header.on .header_wrap .logo {
     position: absolute;
+    top: 22px;
 }
 
 header.on .header_wrap .logo a {
