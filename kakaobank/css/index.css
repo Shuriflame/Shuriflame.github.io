@@ -12,7 +12,7 @@
 	width: 1200px;
 	height: 884px;
 	margin: auto;
-	background-image: url(../img/kakaobank/main-bg2.png);
+	background-image: url(../img/main-bg2.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	z-index: 1;
@@ -212,6 +212,9 @@ a.link_store {
     left: 50%;
     width: 409px;
     margin-left: 220px;
+}
+
+.cont_deposit_savings.on .cont_img img {
     -webkit-animation: go_right 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) forwards;
     animation: go_right 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) forwards;
 }
@@ -328,7 +331,7 @@ a.link_store {
 /*----------------네번째cont_26week끝----------------*/
 
 .cont_foreign {
-    background: url(../img/kakaobank/home-map.png) no-repeat;
+    background: url(../img/home-map.png) no-repeat;
     background-position: -12% 50%;
     height: 750px;
 }
@@ -341,7 +344,7 @@ a.link_store {
     margin: 0 -40px 0 -155px;
 }
 
-.cont_foreign .cont_img {
+.cont_foreign.on .cont_img {
     animation: fadein 1s cubic-bezier(0.6, 0.2, 0.1, 1) forwards;
     -webkit-animation: fadein 1s cubic-bezier(0.6, 0.2, 0.1, 1) forwards;
 }
@@ -459,9 +462,9 @@ a.link_store {
     bottom: 0;
     left: 50%;
     width: 429px;
+    z-index: 1;
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
-    z-index: 1;
 }
 
 .cont_sky {
@@ -476,10 +479,12 @@ a.link_store {
     height: 100%;
     background-color: #559CDE;
     z-index: 0;
+}
+
+
+.cont_loan.on .cont_sky .sky {
     -webkit-animation: go_up 1s forwards;
     animation: go_up 1s forwards;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
 }
 
 @-webkit-keyframes go_up {
@@ -510,10 +515,13 @@ a.link_store {
     width: 110px;
     height: 110px;
     background-color: #FFDC00;
+}
+
+.cont_loan.on .cont_sun .sun {
     -webkit-animation: go_sun .5s forwards;
     animation: go_sun .5s forwards;
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 @-webkit-keyframes go_sun {
@@ -536,10 +544,13 @@ a.link_store {
     width: 110px;
     height: 110px;
     background-color: #333b58;
+}
+
+.cont_loan.on .cont_sun .moon {
     -webkit-animation: go_moon 1s forwards;
     animation: go_moon 1s forwards;
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 @-webkit-keyframes go_moon {
@@ -692,7 +703,7 @@ a.link_store {
     margin-right: 270px;
     width: 38px;
     height: 72px;
-    background: url(../img/kakaobank/img-left.png);
+    background: url(../img/img-left.png);
     border: none;
 }
 
@@ -700,7 +711,7 @@ a.link_store {
     margin-left: 270px;
     width: 38px;
     height: 72px;
-    background: url(../img/kakaobank/img-right.png);
+    background: url(../img/img-right.png);
     border: none;
 }
 

@@ -16,7 +16,7 @@ header {
 }
 
 .img_kabang {
-    background-image: url(../img/kakaobank/img-kabang-200417.png);
+    background-image: url(../img/img-kabang-200417.png);
     background-repeat: no-repeat;
 }
 
@@ -72,7 +72,7 @@ h1.header_logo a {
     margin: auto;
     width: 100%;
     height: 20px;
-    background-image: url(../img/kakaobank/logo-black.svg);
+    background-image: url(../img/logo-black.svg);
     background-repeat: no-repeat;
 }
 

@@ -3,7 +3,7 @@
 }
 
 .header_fixed.on h1.header_logo a {
-    background-image: url(../img/kakaobank/logo_white.svg);
+    background-image: url(../img/logo_white.svg);
 }
 
 .header_fixed.on .gnb_menu_list .gnb_menu_item {
@@ -64,21 +64,21 @@
 }
 
 .list_img.img_1 {
-    background-image: url(../img/kakaobank/detail-16-ico-each-80-pc-2x.png);
+    background-image: url(../img/detail-16-ico-each-80-pc-2x.png);
     background-size: 64px 64px;
     width: 64px;
     height: 64px;
 }
 
 .list_img.img_2 {
-    background: url(../img/kakaobank/sprite.png) no-repeat;
+    background: url(../img/sprite.png) no-repeat;
     background-position: -132px -592px;
     width: 64px;
     height: 64px;
 }
 
 .list_img.img_3 {
-    background: url(../img/kakaobank/sprite.png) no-repeat;
+    background: url(../img/sprite.png) no-repeat;
     background-position: 0 -592px;
     width: 64px;
     height: 64px;
@@ -146,20 +146,29 @@
 .ani_1 {
     width: fit-content;
     height: auto;
-    animation: fadein 1s forwards;
-    -webkit-animation: fadein 1s forwards;
 }
 
 .ani_2 {
     width: fit-content;
     height: auto;
-    animation: down 1s forwards;
-    -webkit-animation: down 1s forwards;
 }
 
 .ani_3 {
     width: fit-content;
     height: auto;
+}
+
+.safebox_cont1.on .ani_1 {
+    animation: fadein 1s forwards;
+    -webkit-animation: fadein 1s forwards;
+}
+
+.safebox_cont1.on .ani_2 {
+    animation: down 1s forwards;
+    -webkit-animation: down 1s forwards;
+}
+
+.safebox_cont1.on .ani_3 {
     animation: fadein2 1.5s forwards ease-in;
     -webkit-animation: fadein2 1.5s forwards ease-in;
 }
@@ -225,7 +234,7 @@
 
 .safebox_cont1 .slide_img {
     display: block;
-    background: url(../img/kakaobank/sprite.png) no-repeat;
+    background: url(../img/sprite.png) no-repeat;
     margin-bottom: 10px;
     width: 319px;
 }
@@ -315,11 +324,12 @@
     position: absolute;
     width: 210px;
     height: 210px;
+    background-color: #3E4459;
+}
+
+.safebox_cont2.on .cont_circle.circle_1 {
     -webkit-animation: scale 1s ease-in-out forwards;
     animation: scale 1s ease-in-out forwards;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-    background-color: #3E4459;
 }
 
 .circle_txt2 {
@@ -362,12 +372,13 @@
     background-color: rgba(0,159,102,0.9);
     align-items: center;
     justify-content: center;
-    -webkit-animation: go_move 1s ease-in-out forwards;
-    animation: go_move 1s ease-in-out forwards;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
     font-size: 28px;
     z-index: 1;
+}
+
+.safebox_cont2.on .cont_circle.circle_2 {
+    -webkit-animation: go_move 1s ease-in-out forwards;
+    animation: go_move 1s ease-in-out forwards;
 }
 
 @keyframes go_move {
@@ -495,27 +506,29 @@
     position: absolute;
     top: 150px;
     left: 540px;
-    background: url(../img/kakaobank/sprite.png) no-repeat;
+    background: url(../img/sprite.png) no-repeat;
     background-position: -291px 0;
     width: 260px;
     height: 525px;
+}
+
+.safebox_cont3.on .img_1 {
     -webkit-animation: go_left 1s forwards;
     animation: go_left 1s forwards;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
 }
 
 .safebox_cont3 .img_2 {
     position: absolute;
     top: 90px;
     left: 580px;
-    background: url(../img/kakaobank/sprite.png) no-repeat;
+    background: url(../img/sprite.png) no-repeat;
     width: 289px;
     height: 589px;
+}
+
+.safebox_cont3.on .img_2 {
     -webkit-animation: go_right 1s forwards;
     animation: go_right 1s forwards;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
 }
 
 @keyframes go_left{
@@ -593,7 +606,7 @@
     position: absolute;
     top: 35px;
     right: 30px;
-    background: url(../img/kakaobank/img_kakaobank.png) no-repeat;
+    background: url(../img/img_kakaobank.png) no-repeat;
     background-position: -101px -121px;
     width: 15px;
     height: 10px;
@@ -704,7 +717,7 @@
     right: 13px;
     bottom: 13px;
     width: 46px; height: 46px;
-    background: url(../img/kakaobank/img_kakaobank.png) no-repeat;
+    background: url(../img/img_kakaobank.png) no-repeat;
 }
 
 .item_1 {
@@ -712,7 +725,7 @@
 }
 
 .item_2 {
-    background: url(../img/kakaobank/ico72Account5Green-2x.png) no-repeat;
+    background: url(../img/ico72Account5Green-2x.png) no-repeat;
     background-size: 46px;
 }
 
