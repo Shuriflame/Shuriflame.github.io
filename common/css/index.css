@@ -33,7 +33,6 @@ canvas {
 aside {
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
   width: 50px;
   padding-top: 20px;
@@ -221,6 +220,10 @@ aside>span.on {
   justify-content: center;
   align-items: center;
   gap: 26px;
+
+  @media (max-width: 768px) {
+    padding: 0 6vw;
+  }
 }
 
 #main .button_wrap .btn {
@@ -581,7 +584,7 @@ main .box>li {
   left: 50%;
   width: 0.7vw;
   height: 700px;
-  margin-left: 19.4vw;
+  margin-left: 11.8vw;
   border-radius: 30px;
   background: -webkit-linear-gradient(top, #aa4b6b, #8456aa, #543b99, #8456aa, #aa4b6b);
   background: linear-gradient(top, #aa4b6b, #8456aa, #543b99, #8456aa, #aa4b6b);
@@ -805,6 +808,11 @@ main .box>li {
   /* Animation provies a slight random skew. Check bottom of doc
   for more information on how to random skew. */
   /* animation: glitch-skew 1s infinite linear alternate-reverse; */
+
+  @media (max-width: 768px) {
+    font-size: 2.2em;
+    line-height: 1.2;
+  }
 }
 
 .glitch::before {
@@ -1098,54 +1106,5 @@ skew to change the 'thickness' of the glitch.*/
 
   100% {
     transform: skew(-2deg);
-  }
-}
-
-
-/* 반응형 */
-@media screen and (max-width : 700px) {
-  .glitch {
-    font-size: 2em;
-  }
-
-  header {
-    height: 200px;
-    line-height: 200px;
-  }
-
-  h1 {
-    margin: 0;
-  }
-
-  aside {
-    width: auto;
-    right: 20px;
-    bottom: auto;
-    padding-top: 15px;
-  }
-
-  aside>ul {
-    overflow: hidden;
-  }
-
-  aside>ul>li {
-    float: left;
-  }
-
-  aside>ul>li+li {
-    margin-top: 0;
-    margin-left: 15px;
-  }
-
-  aside>span.btn {
-    top: 60px;
-    left: -20px;
-  }
-}
-
-@media screen and (max-width : 520px) {
-  h1 {
-    line-height: normal;
-    margin-top: 85px;
   }
 }
