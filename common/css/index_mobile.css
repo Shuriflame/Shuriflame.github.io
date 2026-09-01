@@ -1,45 +1,48 @@
 .glitch {
-  font-size: 3em;
+  font-size: 2.2em;
 }
 
 h1 {
   line-height: 1.3;
   margin: 2.67em 0 0;
 }
-#content_2 {height: 100vh;}
-#content_2 > .logo {font-size: 12rem; margin-top: 40px; margin-left: -30px;}
-.discript {top: 58vw; left: 6vw; right: 6vw; font-size: 2.5rem; transform: none;}
+#content_1 {height: auto; min-height: 880px;}
+#content_2 {height: auto; min-height: 920px;}
+#content_2 > .logo {font-size: 12rem; margin-top: 8.33vw; margin-left: -6.25vw;}
+.discript {top: 77vw; left: 6vw; right: 6vw; font-size: 2.5rem; transform: none;}
 .discript > p {font-size: 1.2rem;}
-#content_3 > div {width: 100%; float: none;}
+.discript > strong {font-size: 2.2rem;}
+#content_3 > div {width: 100%; float: none; flex-basis:initial;}
 .left {border: none;}
-.left > div {margin: 50px 0 0;}
-.left > div > span.photo {width: 38vw; height: 200px; top: 0;}
+.left > div {margin-left: 0;}
+.left > div > span.photo {width: 200px; height: 200px; top: 0;}
 .left > div > span.circle {background-size: cover; width: 40px; height: 40px;}
-.left > div > span.rect {width: 150px; height: 190px; left: 190px;}
-.left > div > span.vector {width: 150px; height: 30px; background-size: contain; top: 250px; left: 250px; z-index: 1;}
-.left > div > span.vector2 {width: 90px; height: 90px; top: 400px; left: 280px; z-index: 1;}
-.left > ul {margin-left: 50px; width: 140px; margin-top: -90px;}
-.left > ul > li {font-size: 0.8rem;}
+.left > div > span.rect {width: 31.25vw; height: 39.58vw; left: 39.58vw;}
+.left > div > span.vector {width: 31.25vw; height: 6.25vw; background-size: contain; top: 42vw; left: 34vw; z-index: 1;}
+.left > div > span.vector2 {width: 18.75vw; height: 18.75vw; top: 22vw; left: -10vw; z-index: 1;}
+.left > ul {position:absolute; top:360px; left: 50%; transform: translateX(-50%); margin: 0 0 0 -20vw; width: 170px;}
+.left > ul > li {font-size: 0.7rem;}
 .right {position: absolute; top: 0;}
-.right > span {right: unset; left: 50%; transform: translateX(-50%); height: 1150px; margin:0;}
-.right > ul > li:nth-child(2n-1) {border-left: none; border-right: 1px solid #000; padding-right: 10px; left: unset; width: 200px; margin-left: 220px;}
-.right > ul > li:nth-child(2n-1)::after {right: unset; left: -35px;}
-.right > ul > li:nth-child(2n) {padding-right: 10px; left: unset; width: 200px;}
-.right > ul > li:nth-child(2n)::after {right: -35px;}
-.right > ul {position: absolute; margin: 0; top: 570px; left: 20px; width: 420px;}
+.right > span {right: unset; left: 50%; transform: translateX(-50%); height: 239.58vw; margin:0;}
+.right > ul {position: absolute; margin: 0; top: 420px; left: 50%; width: auto;}
+.right > ul > li:nth-child(2n-1) {border-left: none; border-right: 1px solid #000; padding-right: 10px; left: unset; width: 187px; margin-left: 220px;}
+.right > ul > li:nth-child(2n-1)::after {right: unset; left: -42px;}
+.right > ul > li:nth-child(2n) {padding-right: 10px; left: unset; width: 187px;}
+.right > ul > li:nth-child(2n)::after {right: -40px;}
 .right > ul > li {font-size: 0.8rem;}
 .right > ul > li > p {font-size: 0.8rem;}
-#content_3 {height: 1300px;}
-#content_3 > .middle {top: 50px; font-size: 7rem; transform: unset;}
-#content_4 {height: 880px;}
-#content_4 > .middle {top: 150px; font-size: 7rem;}
-#content_4 > .photo {width: 70px; height: 70px; top: 80px; left: 100px;}
-#content_4 > .illust {width: 70px; height: 70px; top: 180px; left: 250px;}
-#content_4 > .ppt {width: 70px; height: 70px; top: 250px; left: 100px;}
-#content_4 > .html {width: 70px; height: 70px; top: 350px; left: 300px;}
-#content_4 > .css {width: 70px; height: 70px; top: 410px; left: 150px;}
-#content_4 > .js {width: 70px; height: 70px; top: 540px; left: 50px;}
-#content_4 > .android {width: 70px; height: 70px; top: 530px; left: 270px;}
-#content_4 > .vue {width: 70px; height: 70px; top: 630px; left: 1200px;}
-#content_4 > .sql {width: 70px; height: 70px; top: 670px; left: 150px;}
-#content_4 > .java {width: 70px; height: 70px; top: 680px; left: 300px;}
+.right > ul > li + li {margin-top: 8.33vw;}
+#content_3 {height: auto; min-height: 1100px;}
+#content_3 > .middle {top: 10.42vw; font-size: 7rem; transform: unset;}
+#content_4 {height: 180vw;}
+#content_4 > .middle {top: 31.25vw; font-size: 7rem;}
+#content_4 > .react {width:17vw; height:17vw; top: 13vw; left: 50%; margin-left: -27vw}
+#content_4 > .vue {width:17vw; height:17vw; top: 26vw; left: 50%; margin-left: 10vw;}
+#content_4 > .illust {width:17vw; height:17vw; top: 42vw; left: 50%; margin-left: -11vw}
+#content_4 > .photo {width:17vw; height:17vw; top: 65vw; left: 50%; margin-left: -34vw}
+#content_4 > .html {width:17vw; height:17vw; top: 68vw; left: 50%; margin-left: 19vw;}
+#content_4 > .css {width:17vw; height:17vw; top: 84vw; left: 50%; margin-left: -9vw}
+#content_4 > .js {width:17vw; height:17vw; top: 109vw; left: 50%; margin-left: 10vw}
+#content_4 > .android {width:17vw; height:17vw; top: 107vw; left: 50%; margin-left: -34vw}
+#content_4 > .sql {width:17vw; height:17vw; top: 132vw; left: 50%; margin-left: -12vw}
+#content_4 > .java {width:17vw; height:17vw; top: 147vw; left: 50%; margin-left: -31vw; }

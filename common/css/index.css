@@ -220,6 +220,10 @@ aside>span.on {
   justify-content: center;
   align-items: center;
   gap: 26px;
+
+  @media (max-width: 768px) {
+    padding: 0 6vw;
+  }
 }
 
 #main .button_wrap .btn {
@@ -804,6 +808,11 @@ main .box>li {
   /* Animation provies a slight random skew. Check bottom of doc
   for more information on how to random skew. */
   /* animation: glitch-skew 1s infinite linear alternate-reverse; */
+
+  @media (max-width: 768px) {
+    font-size: 2.2em;
+    line-height: 1.2;
+  }
 }
 
 .glitch::before {
